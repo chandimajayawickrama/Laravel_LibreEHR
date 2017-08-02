@@ -22,11 +22,11 @@ class CreateBillingTable extends Migration
 			$table->integer('provider_id');
 			$table->integer('user');
 			$table->string('groupname',255);
-			$table->tinyInteger('authorized');
+			$table->boolean('authorized');
 			$table->integer('encounter');
 			$table->text('code_text');
-			$table->tinyInteger('billed');
-			$table->tinyInteger('activity');
+			$table->boolean('billed');
+			$table->boolean('activity');
 			$table->integer('payer_id');
 			$table->tinyInteger('bill_process')->default(0);
 			$table->timestamp('bill_date');
