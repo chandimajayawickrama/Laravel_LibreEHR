@@ -16,7 +16,7 @@ class CreateBackgroundServicesTable extends Migration
 			$table->=engine = 'InnoDB';
 			$table->string('name',31);
 			$table->string('title',127);
-			$table->tinyInteger('active')->default(0);
+			$table->boolean('active')->default(0);
 			$table->tinyInteger('running')->default(-1);
 			$table->timstamp('next_run');
 			$table->integer('execute_interval')->default(0);
