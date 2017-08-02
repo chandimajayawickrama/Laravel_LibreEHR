@@ -17,12 +17,12 @@ class CreateAuditMasterTable extends Migration
 			$table->bigIncrements('id');
 			$table->bigInteger('pid');
 			$table->bigInteger('user_id');
-			$table->tinyInteger('approval_status');
+			$table->smallInteger('approval_status');
 			$table->text('comments');
 			$table->timestamp('created_time');
 			$table->timestamp('modified_time');
 			$table->string('ip_address',200);
-			$table->tinyInteger('type');
+			$table->smallInteger('type');
 			$table->primary('id');
 			
 			
