@@ -7,7 +7,8 @@ class CreateArrayTable extends Migration
 {
     /**
      * Run the migrations.
-     *
+     * Creates table for array
+     * @author Chandima Jayawickrama
      * @return void
      */
     public function up()
