@@ -7,7 +7,8 @@ class CreateFormFunctionalCognitiveStatusTable extends Migration
 {
     /**
      * Run the migrations.
-     *
+     * Creates database table for form_functional_cognitive_status
+     * @author Chandima Jayawickrama
      * @return void
      */
     public function up()
