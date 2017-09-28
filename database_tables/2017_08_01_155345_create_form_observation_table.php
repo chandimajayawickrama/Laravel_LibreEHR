@@ -7,7 +7,8 @@ class CreateFormObservationTable extends Migration
 {
     /**
      * Run the migrations.
-     *
+     * Creates database table for form_observation
+     * @author Chandima Jayawickrama
      * @return void
      */
     public function up()
