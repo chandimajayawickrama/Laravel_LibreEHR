@@ -7,7 +7,8 @@ class CreateMenuTreesTable extends Migration
 {
     /**
      * Run the migrations.
-     *
+     * Creates database table for menu_trees
+     * @author Chandima Jayawickrama
      * @return void
      */
     public function up()
@@ -21,7 +22,7 @@ class CreateMenuTreesTable extends Migration
 			$table->string('parent',255);
 			$table->integer('seq');
 			$table->string('label',255);
-			$table->primsry('menu_set','entry_id','parent');
+			$table->primsry('menu_set','entry_id','parent')->comment = "Primary key";
 			
 			
 		});
