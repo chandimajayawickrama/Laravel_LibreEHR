@@ -14,8 +14,8 @@ class CreateBillingTable extends Migration
     {
         Schema::create('billing',fucntion(Blueprint $table){
 			$table->engine = 'InnoDB';
-			$table->increment('id');
-			$table->timestamp('date');
+			$table->increment('id')->comment = "Primary key,auto increment";
+			$table->dateTime('date')->comment = "Date";
 			$table->string('code_type',15);
 			$table->string('code',20);
 			$table->integer('pid');
