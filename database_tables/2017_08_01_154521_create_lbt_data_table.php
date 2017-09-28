@@ -7,7 +7,8 @@ class CreateLbtDataTable extends Migration
 {
     /**
      * Run the migrations.
-     *
+     * Create database table for lbt_data
+     * @author Chandima Jayawickrama
      * @return void
      */
     public function up()
@@ -17,7 +18,7 @@ class CreateLbtDataTable extends Migration
 			$table->bigInteger('form_id');
 			$table->string('field_id',31);
 			$table->text('field_value');
-			$table->primary(['form_id','field_id']);
+			$table->primary(['form_id','field_id'])->comment = "Primary key";
 			
 			
 		});
