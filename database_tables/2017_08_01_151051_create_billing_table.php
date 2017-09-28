@@ -7,7 +7,8 @@ class CreateBillingTable extends Migration
 {
     /**
      * Run the migrations.
-     *
+     * Creates databse tabel for billing
+     * @author Chandima Jayawickrama
      * @return void
      */
     public function up()
