@@ -7,7 +7,8 @@ class CreateChartTrackerTable extends Migration
 {
     /**
      * Run the migrations.
-     *
+     * Creates database table for chart_tracker
+     * @author Chandima Jayawickrama
      * @return void
      */
     public function up()
@@ -18,7 +19,7 @@ class CreateChartTrackerTable extends Migration
 			$table->dateTime('ct_when');
 			$table->bigInteger('ct_userid')->default(0);
 			$table->string('ct_location',31);
-			$table->primary(['ct_pid', 'ct_when']);
+			$table->primary(['ct_pid', 'ct_when'])->comment = "Primary key";
 			
 			
 		});
