@@ -7,14 +7,15 @@ class CreateCategoriesSeqTable extends Migration
 {
     /**
      * Run the migrations.
-     *
+     * Creates database table for categories_seq
+     * @author Chandima Jayawickrama
      * @return void
      */
     public function up()
     {
         Schema::create('categories_seq',function(Blueprint $table){
 			$table->engine = 'InnoDB';
-			$table->integer('id')->default(0);
+			$table->integer('id')->default(0)->comment = "Primary key";
 			$table->primary('id');
 			
 			
