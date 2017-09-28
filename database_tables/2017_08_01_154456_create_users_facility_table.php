@@ -7,7 +7,8 @@ class CreateUsersFacilityTable extends Migration
 {
     /**
      * Run the migrations.
-     *
+     * Creates database table for users_facility
+     * @author Chandima Jayawickrama
      * @return void
      */
     public function up()
@@ -17,7 +18,7 @@ class CreateUsersFacilityTable extends Migration
 			$table->string('tablename',64);
 			$table->integer('table_id');
 			$table->integer('facility_id');
-			$table->primary('tablename','table_id','facility_id');
+			$table->primary('tablename','table_id','facility_id')->comment = "Primary key";
 			
 			
 		});
