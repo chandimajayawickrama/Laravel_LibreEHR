@@ -7,14 +7,15 @@ class CreateMenuEntriesTable extends Migration
 {
     /**
      * Run the migrations.
-     *
+     * Creates database table menu_entries 
+     * @author Chandima Jayawickrama
      * @return void
      */
     public function up()
     {
         Schema::create('menu_entries',function(Blueprint $table){
 			$table->engine = 'InnoDB';
-			$table->string('id',255);
+			$table->string('id',255)->comment = "Primary key, auto increment";
 			$table->string('label',255);
 			$table->string('icon',50);
 			$table->string('class',50);
