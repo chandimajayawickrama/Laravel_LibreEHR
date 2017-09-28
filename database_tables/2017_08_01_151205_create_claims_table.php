@@ -7,7 +7,8 @@ class CreateClaimsTable extends Migration
 {
     /**
      * Run the migrations.
-     *
+     * Creates database table for claims
+     * @author Chandima Jayawickrama
      * @return void
      */
     public function up()
@@ -16,7 +17,7 @@ class CreateClaimsTable extends Migration
 			$table->engine = 'InnoDB';
 			$table->integer('patient_id');
 			$table->integer('encounter_id');
-			$table->integer('version')->unsigned();
+			$table->integer('version')->unsigned()->comment = "Claim version, incremented in code";
 			$table->integer('payer_id')->default(0);
 			$table->tinyInteger('status')->default(0);
 			$table->tinyInteger('payer_type')->default(0);
