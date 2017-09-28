@@ -7,14 +7,15 @@ class CreateFormClinicalInstructionsTable extends Migration
 {
     /**
      * Run the migrations.
-     *
+     * Creates database table for form_clinical_instructions
+     * @author Chandima Jayawickrama
      * @return void
      */
     public function up()
     {
         Schema::create('form_clinical_instructions',function(Blueprint $table){
 			$table->engine = 'InnoDB';
-			$table->increment('id');
+			$table->increment('id')->comment = "Primary key";
 			$table->bigInteger('pid');
 			$table->string('encounter',255);
 			$table->string('user',255);
